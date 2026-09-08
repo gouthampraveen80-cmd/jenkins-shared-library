@@ -1,0 +1,8 @@
+def call(String branchName) {
+
+    git(
+        branch: branchName,
+        credentialsId: 'test-devops',
+        url: 'https://github.com/gouthampraveen80-cmd/testdevops.git'
+    )
+}

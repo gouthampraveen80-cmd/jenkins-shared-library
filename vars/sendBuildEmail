@@ -1,0 +1,17 @@
+def call(String branchName, String recipient) {
+
+    emailext(
+        subject: "Git Checkout Successful - ${branchName}",
+        body: """
+Git checkout completed successfully.
+
+Repository: testdevops
+Branch: ${branchName}
+Build Number: ${env.BUILD_NUMBER}
+Build URL: ${env.BUILD_URL}
+
+Status: SUCCESS
+""",
+        to: recipient
+    )
+}
