@@ -1,7 +1,7 @@
 def call(String branchName) {
 
     git(
-        branch: branchName,
+        branch: params.Branch,
         credentialsId: 'test-devops',
         url: 'https://github.com/gouthampraveen80-cmd/testdevops.git'
     )
